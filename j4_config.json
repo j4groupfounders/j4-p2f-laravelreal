@@ -1,0 +1,18 @@
+{
+  "name": "laravelreal",
+  "stack": "Laravel",
+  "upstream": "f1amy/laravel-realworld-example-app",
+  "old": "9.17.0",
+  "new": "10.48.29",
+  "reason": "Laravel 9 to 10 raises PHP requirements and changes framework contracts, Monolog and companion packages; complete RealWorld authentication/article API suite retained.",
+  "routes": [
+    "/api/articles",
+    "/api/tags",
+    "/api/user",
+    "/api/articles/feed",
+    "/api/profiles/j4-missing"
+  ],
+  "id": "p2-17-laravelreal",
+  "repo": "j4groupfounders/j4-p2f-laravelreal",
+  "source": "c14fb8370b71a42a3a74b8ea936a1f96b2af9d69"
+}
