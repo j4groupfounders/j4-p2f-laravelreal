@@ -1,0 +1,42 @@
+[
+  {
+    "route": "/api/articles",
+    "status": 200,
+    "type": "application/json",
+    "redirect": null,
+    "hash": "e16a3d4e4f6788f0dfbcac33119bf66c17e4a5f59728e79d4c4f30ddfea7ea50",
+    "body": "{\"articles\":[],\"articlesCount\":0}"
+  },
+  {
+    "route": "/api/tags",
+    "status": 200,
+    "type": "application/json",
+    "redirect": null,
+    "hash": "b35b1ec1c0c72c4bbd16bd9d6c2cbcac8224272cd7e6ecf504a78f2c7e989b2a",
+    "body": "{\"tags\":[]}"
+  },
+  {
+    "route": "/api/user",
+    "status": 401,
+    "type": "application/json",
+    "redirect": null,
+    "hash": "8031180d4d982a471ca97ef5a04e8d013d003c5c19e80d0a5f45401c4463ec27",
+    "body": "{\"message\":\"Unauthenticated.\"}"
+  },
+  {
+    "route": "/api/articles/feed",
+    "status": 401,
+    "type": "application/json",
+    "redirect": null,
+    "hash": "8031180d4d982a471ca97ef5a04e8d013d003c5c19e80d0a5f45401c4463ec27",
+    "body": "{\"message\":\"Unauthenticated.\"}"
+  },
+  {
+    "route": "/api/profiles/j4-missing",
+    "status": 404,
+    "type": "application/json",
+    "redirect": null,
+    "hash": "21d44e108b2b4614b7cfb61e05694f002f5d0bbb664c880dc5c18504882dbb0d",
+    "body": "{\"message\":\"Resource not found.\"}"
+  }
+]
