@@ -1,0 +1,32 @@
+[
+  {
+    "name": "article creation status wrong",
+    "file": "app/Http/Controllers/Api/Articles/ArticleController.php",
+    "old": "->setStatusCode(201);",
+    "new": "->setStatusCode(200);"
+  },
+  {
+    "name": "article body lost",
+    "file": "app/Http/Resources/Api/ArticleResource.php",
+    "old": "'body' => $this->resource->body,",
+    "new": "'body' => 'J4_CORRUPTED',"
+  },
+  {
+    "name": "article title lost",
+    "file": "app/Http/Resources/Api/ArticleResource.php",
+    "old": "'title' => $this->resource->title,",
+    "new": "'title' => 'J4_CORRUPTED',"
+  },
+  {
+    "name": "user email lost",
+    "file": "app/Http/Resources/Api/UserResource.php",
+    "old": "'email' => $this->resource->email,",
+    "new": "'email' => 'wrong@example.test',"
+  },
+  {
+    "name": "favorites count off by one",
+    "file": "app/Http/Resources/Api/ArticleResource.php",
+    "old": "'favoritesCount' => $this->resource->favoredUsers->count(),",
+    "new": "'favoritesCount' => $this->resource->favoredUsers->count() + 1,"
+  }
+]

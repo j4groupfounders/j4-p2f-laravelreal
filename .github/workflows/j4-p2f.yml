@@ -33,7 +33,7 @@ jobs:
           php-version: '8.1'
           extensions: pdo_sqlite, mbstring, dom
           coverage: none
-          tools: composer:2.8.13
+          tools: composer:2.8.12
       - run: |
           composer update roave/security-advisories --no-interaction --prefer-dist --no-progress
           cp .env.example .env
