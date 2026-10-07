@@ -35,7 +35,7 @@ jobs:
           coverage: none
           tools: composer:2.8.12
       - run: |
-          composer update --with-all-dependencies --no-scripts --no-interaction --prefer-dist --no-progress
+          composer install --no-interaction --prefer-dist --no-progress
           composer dump-autoload --no-interaction
           cp .env.example .env
           php artisan key:generate
