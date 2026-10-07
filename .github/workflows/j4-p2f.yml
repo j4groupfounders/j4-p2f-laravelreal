@@ -35,9 +35,15 @@ jobs:
           coverage: none
           tools: composer:2.8.12
       - run: |
-          composer install --no-interaction --prefer-dist --no-progress
+          composer update --with-all-dependencies --no-scripts --no-interaction --prefer-dist --no-progress
+          composer dump-autoload --no-interaction
           cp .env.example .env
           php artisan key:generate
+      - name: Preserve resolved lock
+        run: |
+          mkdir -p Evidence
+          if test -f composer.lock; then cp composer.lock Evidence/; fi
+          if test -f package-lock.json; then cp package-lock.json Evidence/; fi
       - name: Verify fresh checkout
         env:
           J4_MUTATION: ${{ matrix.mutation }}
